@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div class = "container">
+<div>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>이름</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each = "p : ${products222}">
+<td th:text = "${p.id}"></td>
+<td th:text = "${p.name}"></td>
+<td>
+	<a th:href="@{/products/{id}/delete(id=${p.id})}">삭제</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</body>
+</html>
