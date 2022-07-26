@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.currychoco.product.domain.Product;
 
-@Repository
+
 public class MemoryProductRepository implements ProductRepository{
 
 	private static Map<Long, Product> store = new HashMap<>();
