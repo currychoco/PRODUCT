@@ -12,11 +12,9 @@ import java.util.Optional;
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.datasource.DataSourceUtils;
-import org.springframework.stereotype.Repository;
 
 import com.currychoco.product.domain.Product;
 
-@Repository
 public class JdbcProductRepository implements ProductRepository{
 	private final DataSource dataSource;
 	
