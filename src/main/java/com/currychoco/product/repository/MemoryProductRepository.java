@@ -6,10 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.springframework.stereotype.Repository;
-
 import com.currychoco.product.domain.Product;
-
 
 public class MemoryProductRepository implements ProductRepository{
 
