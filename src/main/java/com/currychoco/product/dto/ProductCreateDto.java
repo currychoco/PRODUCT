@@ -1,6 +1,6 @@
-package com.currychoco.product.controller;
+package com.currychoco.product.dto;
 
-public class ProductForm {
+public class ProductCreateDto {
 	private String name;
 	
 	public String getName() {

@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.currychoco.product.domain.Member;
 import com.currychoco.product.domain.Product;
 
 @Repository
@@ -43,4 +44,5 @@ public class MyBatisProductRepository implements ProductRepository{
 		int rowCount = sqlSession.delete("product.deleteById", id);
 		return rowCount > 0;
 	}
+
 }

@@ -3,6 +3,7 @@ package com.currychoco.product.repository;
 import java.util.List;
 import java.util.Optional;
 
+import com.currychoco.product.domain.Member;
 import com.currychoco.product.domain.Product;
 
 public interface ProductRepository {

@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.servlet.ModelAndView;
 
+import com.currychoco.product.domain.Member;
 import com.currychoco.product.domain.Product;
+import com.currychoco.product.dto.MemberJoinDto;
+import com.currychoco.product.dto.ProductCreateDto;
+import com.currychoco.product.dto.ProductReadDto;
 import com.currychoco.product.service.ProductService;
 
 @Controller
@@ -26,7 +30,7 @@ public class ProductController {
 	}
 	
 	@PostMapping(value = "/products/new")
-	public String create(ProductForm form) {
+	public String create(ProductCreateDto form) {
 		Product product = new Product();
 		product.setName(form.getName());
 		
@@ -37,7 +41,7 @@ public class ProductController {
 	
 	@GetMapping(value = "/products")
 	public String list(Model model) {
-		List<Product> products = productService.findProdcuts();
+		List<ProductReadDto> products = productService.findProdcuts();
 		model.addAttribute("products222", products);
 		
 		return "products/productList";
@@ -45,7 +49,8 @@ public class ProductController {
 	
 	/*
 	@GetMapping(value = "/products")
-	public ModelAndView listWithModelAndView() {
+	public ModelAndView listWithModelAn
+	dView() {
 		List<Product> products = productService.findProdcuts();
 		
 		ModelAndView mav = new ModelAndView();

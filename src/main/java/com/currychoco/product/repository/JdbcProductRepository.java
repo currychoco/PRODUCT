@@ -13,6 +13,7 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.datasource.DataSourceUtils;
 
+import com.currychoco.product.domain.Member;
 import com.currychoco.product.domain.Product;
 
 public class JdbcProductRepository implements ProductRepository{

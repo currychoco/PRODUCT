@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+	<insert id="save" parameterType="com.currychoco.product.domain.Member">
+		insert into member(id, password, name) values(#{id}, #{password}, #{name})
+	</insert>
+	<select id="findByName" parameterType="String" resultType="com.currychoco.product.domain.Member">
+		select id, password, name from member where name = #{name}
+	</select>
+	<select id="findById" parameterType="String" resultType="com.currychoco.product.domain.Member">
+		select id, password, name from member where id = #{id}
+	</select>
+	<select id="findByIdAndPassword" parameterType="com.currychoco.product.domain.Member" resultType="com.currychoco.product.domain.Member">
+		select id, password, name from member where id = #{id} AND password = #{password}
+	</select>
+</mapper>
