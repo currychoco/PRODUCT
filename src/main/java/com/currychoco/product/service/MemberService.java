@@ -19,8 +19,8 @@ public class MemberService {
 		memberRepository.save(member);
 	}
 
-	public boolean checkLogin(String id, String password) {
-		return memberRepository.findByIdAndPassword(id, password).isPresent();
+	public Member checkLogin(String id, String password) {
+		return memberRepository.findByIdAndPassword(id, password);
 	}
 	
 	private void validateDuplicateMember(Member member) {

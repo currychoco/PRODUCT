@@ -27,10 +27,10 @@ public class MemberRepository {
 	public Optional<Member> findById(String id) {
 		return Optional.ofNullable(sqlSession.selectOne("member.findById", id));
 	}
-	public Optional<Member> findByIdAndPassword(String id, String password) {
+	public Member findByIdAndPassword(String id, String password) {
 		Member member = new Member();
 		member.setId(id);
 		member.setPassword(password);
-		return Optional.ofNullable(sqlSession.selectOne("member.findByIdAndPassword", member));
+		return sqlSession.selectOne("member.findByIdAndPassword", member);
 	}
 }
