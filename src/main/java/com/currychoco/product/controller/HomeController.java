@@ -17,10 +17,11 @@ public class HomeController {
 		String name = (String) session.getAttribute("name");
 		String ip = (String) session.getAttribute("ip");
 		
-		if(!ip.equals(request.getLocalAddr())) {
+		String currentIp = request.getLocalAddr();
+		
+		if(id != null && !currentIp.equals(ip)) {
 			session.invalidate();
 		}
-		
 		
 		model.addAttribute("id", id);
 		model.addAttribute("name", name);

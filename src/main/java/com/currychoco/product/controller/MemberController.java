@@ -54,4 +54,11 @@ public class MemberController {
 			return "redirect:/members/login";
 		}
 	}
+	
+	@GetMapping(value = "/members/logout")
+	public String logout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "redirect:/members/login";
+	}
 }
